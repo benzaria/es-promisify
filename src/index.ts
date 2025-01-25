@@ -1,6 +1,5 @@
 import ms from "ms"
-
-const echo = console.log
+import { echo } from '../test/util' //? for Testing
 
 export type PromisifyTarget = (...args: any[]) => any
 export type PromisifyObject = { [key: string | number | symbol]: any }
