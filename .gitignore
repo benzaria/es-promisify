@@ -1,0 +1,9 @@
+node_modules/
+node_modules/**/*
+.vscode/
+.history/
+src/dep*
+test
+dist
+
+run.bat
