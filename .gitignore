@@ -2,8 +2,11 @@ node_modules/
 node_modules/**/*
 .vscode/
 .history/
-src/dep*
-test
+deprecated*
 dist
 
 run.bat
+esbuild*
+tsup*
+
+test*
