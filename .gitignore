@@ -10,3 +10,4 @@ esbuild*
 tsup*
 
 test*
+*proxy*

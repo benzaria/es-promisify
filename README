@@ -45,13 +45,12 @@ const result = await promisify(fn, 3e3)('upperCase this!!')
 console.log(result) //=> UPPERCASE THIS!! after 2s
 ```
 
-
 ## API
 
 ### promisify(target, ...params)
 
 - `target` (Function|Object): With callback-style to convert.
-- ***...params*** : 
+- ***...params*** :
   - `timeout` (String|Number): Timeout for the promisified function.
   - `bind` (Object|String): The context for the function. `'this' = target`
   - `options` (Object): Optional settings.
@@ -69,7 +68,7 @@ import { newPromisify, Promisify } from 'es-promisify'
 
 // methode-1 
 const promisify = newPromisify(customPromiseConstructor, defultOptions)
-// return ↑ the handler binded to new class instance
+// return ↑ the handler binded to new instance
 
 // methode-2
 const P = new Promisify(/* same optional args */) 
