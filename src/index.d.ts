@@ -179,4 +179,4 @@ type types = {
     cacheType: cacheType;
 };
 
-export { Promisify, type cache, _default as default, newPromisify, type types };
+export { Promisify, newPromisify, _default as default, type types };
