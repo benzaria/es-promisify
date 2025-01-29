@@ -7,7 +7,11 @@ dist
 
 run.bat
 esbuild*
-tsup*
+# tsup*
 
 test*
 *proxy*
+
+__*
+
+*.txt

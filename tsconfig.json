@@ -9,7 +9,7 @@
         "allowJs": true,
         "checkJs": true,
         "sourceMap": true,
-        "skipLibCheck": true,
+        "skipLibCheck": false,
         "noEmitOnError": true,
         "esModuleInterop": true,
         "isolatedModules": true,
@@ -18,7 +18,8 @@
         "forceConsistentCasingInFileNames": true,
     },
     "include": [
-        "src/index.ts"
+        "src/**/*.ts",
+        "types/**/*.d.ts",
     ],
     "exclude": [
         "node_modules",

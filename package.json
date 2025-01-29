@@ -2,23 +2,19 @@
   "name": "es-promisify",
   "version": "1.0.0",
   "description": "Promisify utility for function, eventListener and object",
-  "main": ".dist/cjs/index.cjs",
-  "module": "./dist/esm/index.js",
+  "type": "module",
+  "main": ".dist/index.js",
   "types": "./dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.js"
-    }
-  },
   "scripts": {
     "start": "node ./dist/index.js",
     "test": "tsx test/test.ts",
-    "prebuild": "npm run lint",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
-    "build:esm": "tsc --module ESNext --outDir dist/esm",
-    "build": "npm run build:cjs && npm run build:esm",
+    "prebuild": "npm run check && npm run lint",
+    "build": "tsup",
+    "build:tsc": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --module CommonJS --outDir out/cjs",
+    "build:esm": "tsc --module ESNext --outDir out/esm",
     "tsup": "tsup",
+    "check": "tsc --noEmit",
     "lint": "eslint ./src/index.ts"
   },
   "repository": {

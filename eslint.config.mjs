@@ -29,6 +29,7 @@ export default [
     rules: {
       ...jsPlugin.configs.recommended.rules,
       'strict': ['error', 'never'], // Disable strict mode in JS files
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }]
     },
   },
 
