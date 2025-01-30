@@ -1,5 +1,6 @@
-import ms from "ms"
+import tms, { msInput } from "@benzn/to-ms"
 import './types/index.d'
+
 // const { echo, fn } = await import('../test/util') //? for testing
 
 /**
@@ -121,21 +122,6 @@ class Promisify {
   }
 
   /**
-   * Converts a time value to milliseconds.
-   * @param {timeoutType} time The time value to convert. Can be a string or a number.
-   *               If a string is provided, it will be parsed using the `ms` library.
-   *               If a number is provided, it will be returned as is.
-   * @returns {number} The time value in milliseconds.
-   * @memberof Promisify 
-   */
-  private msTime(time?: timeoutType): number {
-    if (!time) return 0
-    if (typeof time === 'string') return ms(time)
-    return time
-  }
-
-
-  /**
    * Checks if the provided object matches the expected options type.
    * @param {optionsType|object} obj The object to be checked against the default options.
    * @returns {boolean} `true` if the object is a valid options type, `false` otherwise.
@@ -232,7 +218,7 @@ class Promisify {
     },
   ): PromisifyPromiseFunction<T> {
     const { timeout, bind, cbType, cache } = { ...this.defOptions, ...options };
-    const msTimeout = this.msTime(timeout)
+    const msTimeout = tms(timeout as msInput)
 
     const promise = (...args: Parameters<T>): Promise<ReturnType<T>> => {
       return new this.$Promise((resolve, reject) => {

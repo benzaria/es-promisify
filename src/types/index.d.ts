@@ -1,4 +1,4 @@
-import ms from 'ms'
+import { msInput } from '@benzn/to-ms'
 import { Promisify } from "../index";
 
 declare global {
@@ -7,7 +7,7 @@ declare global {
     type PromisifyObject = { [key: string | number | symbol]: any }
     type PromisifyTarget = PromisifyFunction | PromisifyObject
 
-    type timeoutType = ms.StringValue | number
+    type timeoutType = msInput
     type bindType = 'this' | PromisifyObject | optionsType //? for IntelliSense
     type cbType = 'errFirst' | 'resultOnly'
     type optionsType = {
