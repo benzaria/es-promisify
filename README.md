@@ -30,7 +30,7 @@ readFileAsync('example.txt', 'utf8')
 
 - [x] **esm**
 
-```typescript esm
+```typescript
 import promisify from 'es-promisify'
 
 const fn = (str: string, cb: (err, ...res) => void) => {

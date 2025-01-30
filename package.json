@@ -1,7 +1,7 @@
 {
-  "name": "es-promisify",
-  "version": "1.0.0",
-  "description": "Promisify utility for function, eventListener and object",
+  "name": "@benzn/promisify",
+  "version": "0.0.1",
+  "description": "Promisify utility for function and object",
   "type": "module",
   "main": ".dist/index.js",
   "types": "./dist/types/index.d.ts",
@@ -14,7 +14,7 @@
     "build:cjs": "tsc --module CommonJS --outDir out/cjs",
     "build:esm": "tsc --module ESNext --outDir out/esm",
     "tsup": "tsup",
-    "check": "tsc --noEmit",
+    "type-check": "tsc --noEmit",
     "lint": "eslint ./src/index.ts"
   },
   "repository": {
@@ -44,6 +44,6 @@
     "typescript-eslint": "^8.21.0"
   },
   "dependencies": {
-    "ms": "^2.1.3"
+    "@benzn/to-ms": "^1.2.0"
   }
 }

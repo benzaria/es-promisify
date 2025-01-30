@@ -10,6 +10,7 @@
         "checkJs": true,
         "sourceMap": true,
         "skipLibCheck": false,
+        "declaration": true,
         "noEmitOnError": true,
         "esModuleInterop": true,
         "isolatedModules": true,

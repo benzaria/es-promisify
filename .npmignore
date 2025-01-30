@@ -17,3 +17,6 @@ __*
 *.txt
 
 *lock*
+
+eslint*
+tsup*
