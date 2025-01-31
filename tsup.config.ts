@@ -11,4 +11,5 @@ export default defineConfig({
     minify: false,
     minifySyntax: true,
     outDir: './dist',
+    
 })
