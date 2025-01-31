@@ -3,7 +3,7 @@ node_modules/**/*
 .vscode/
 .history/
 deprecated*
-dist
+# dist
 
 run.bat
 esbuild*

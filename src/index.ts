@@ -1,5 +1,5 @@
 import tms, { msInput } from "@benzn/to-ms"
-import './types/index.d'
+import './types'
 
 // const { echo, fn } = await import('../test/util') //? for testing
 

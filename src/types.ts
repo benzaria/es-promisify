@@ -1,5 +1,5 @@
 import { msInput } from '@benzn/to-ms'
-import { Promisify } from "../index";
+import { Promisify } from "./index";
 
 declare global {
 
